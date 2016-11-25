@@ -10,7 +10,8 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       $: "jquery",
-      jQuery: "jquery"
+      jQuery: "jquery",
+      _: "lodash"
     })
   ],
   module: {
@@ -22,10 +23,6 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style-loader", "css-loader", "sass-loader"]
-      },
-      {
-        test: /\.svg$/,
-        loader: "url-loader"
       },
       {
         test: /\.(woff2?|ttf|eot|svg)$/,
