@@ -1,19 +1,24 @@
 {
   "name": "Project1",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.14.0",
+    "bootstrap-sass": "^3.3.7",
     "consign": "^0.1.2",
     "cookie-parser": "~1.0.1",
+    "css-loader": "^0.26.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "helmet": "^0.4.2",
     "morgan": "^1.6.1",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
+    "sass-loader": "^4.0.2",
     "sequelize": "^3.27.0",
-    "sequelize-cli": "^2.4.0"
+    "sequelize-cli": "^2.4.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
   }
 }
