@@ -17,10 +17,10 @@
 
 <script>
   module.exports = {
-    name: 'hello',
+    name: 'index',
     computed: {
       count: function () {
-        return MyApplication.store.state.count;
+        return AppVeuxStore.state.count;
       }
     },
     data: function () {
@@ -30,10 +30,10 @@
     },
     methods: {
       increment: function () {
-        MyApplication.store.commit('increment');
+        AppVeuxStore.commit('increment');
       },
       decrement: function () {
-        MyApplication.store.commit('decrement');
+        AppVeuxStore.commit('decrement');
       }
     }
   }

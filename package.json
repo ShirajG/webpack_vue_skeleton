@@ -1,7 +1,8 @@
 {
   "name": "Project1",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "bundle": "webpack --progress --colors --watch"
   },
   "dependencies": {
     "body-parser": "^1.14.0",
@@ -11,6 +12,7 @@
     "cookie-parser": "~1.0.1",
     "css-loader": "^0.26.0",
     "ejs": "^2.4.1",
+    "expose-loader": "^0.7.1",
     "express": "^4.13.4",
     "helmet": "^0.4.2",
     "jquery": "^3.1.1",

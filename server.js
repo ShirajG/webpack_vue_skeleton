@@ -7,8 +7,8 @@ var morgan = require('morgan');
 var app = express();
 var models = require('./app/models');
 
-//Set port to env.Port or default to 8080
-app.set('port', process.env.PORT || 8080);
+//Set port to env.Port or default to 3000
+app.set('port', process.env.PORT || 3000);
 
 //set view engine
 app.set('view engine', 'ejs');
