@@ -12,7 +12,8 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       _: "lodash",
-      Vue: "vue"
+      Vue: "vue",
+      Vuex: "vuex"
     })
   ],
   module: {
