@@ -11,11 +11,17 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
-      _: "lodash"
+      _: "lodash",
+      Vue: "vue"
     })
   ],
   module: {
     loaders: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {}
+      },
       {
         test: /\.css$/,
         loaders: ["style-loader", "css-loader"]
