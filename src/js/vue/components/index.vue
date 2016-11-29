@@ -11,6 +11,7 @@
       <p>{{ count }}</p>
       <a class="btn btn-info" v-on:click="increment">+</a>
       <a class="btn btn-info" v-on:click="decrement">-</a>
+      <a class="btn btn-info" v-on:click="random">???</a>
     </div>
   </div>
 </template>
@@ -18,9 +19,10 @@
 <script>
   module.exports = {
     name: 'index',
+    store:  AppVeuxStore,
     computed: {
       count: function () {
-        return AppVeuxStore.state.count;
+        return this.$store.state.count;
       }
     },
     data: function () {
@@ -30,10 +32,13 @@
     },
     methods: {
       increment: function () {
-        AppVeuxStore.commit('increment');
+        this.$store.commit('increment');
       },
       decrement: function () {
-        AppVeuxStore.commit('decrement');
+        this.$store.commit('decrement');
+      },
+      random: function () {
+        this.$store.dispatch('random');
       }
     }
   }

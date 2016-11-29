@@ -19241,6 +19241,23 @@
 	    decrement: function (state) {
 	      state.count--;
 	    }
+	  },
+	  actions: {
+	    incrementCount: function (context) {
+	      context.commit('increment')
+	    },
+	    decrementCount: function (context) {
+	      context.commit('decrement')
+	    },
+	    random: function (context) {
+	      //  Disable buttons
+	      //  Make ASYNC request
+	      //  On success, show new value, re-enable
+	      //  On error, show error modal
+	    }
+	  },
+	  getters: {
+
 	  }
 	})
 
@@ -20110,12 +20127,14 @@
 	//
 	//
 	//
+	//
 
 	module.exports = {
 	  name: 'index',
+	  store:  AppVeuxStore,
 	  computed: {
 	    count: function () {
-	      return AppVeuxStore.state.count;
+	      return this.$store.state.count;
 	    }
 	  },
 	  data: function () {
@@ -20125,10 +20144,13 @@
 	  },
 	  methods: {
 	    increment: function () {
-	      AppVeuxStore.commit('increment');
+	      this.$store.commit('increment');
 	    },
 	    decrement: function () {
-	      AppVeuxStore.commit('decrement');
+	      this.$store.commit('decrement');
+	    },
+	    random: function () {
+	      this.$store.dispatch('random');
 	    }
 	  }
 	}
@@ -20153,7 +20175,12 @@
 	    on: {
 	      "click": _vm.decrement
 	    }
-	  }, ["-"])])])
+	  }, ["-"]), " ", _vm._h('a', {
+	    staticClass: "btn btn-info",
+	    on: {
+	      "click": _vm.random
+	    }
+	  }, ["???"])])])
 	},staticRenderFns: [function (){var _vm=this;
 	  return _vm._h('ul', {
 	    staticClass: "nav nav-pills"
