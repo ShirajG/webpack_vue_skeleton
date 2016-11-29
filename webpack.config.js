@@ -2,19 +2,19 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: "./src/js/app.js",
+  entry: './src/js/app.js',
   output: {
     path: path.join('public', 'js'),
-    filename: "bundle.js",
+    filename: 'bundle.js',
     publicPath: '/public/js'
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      _: "lodash",
-      Vue: "vue",
-      Vuex: "vuex"
+      $: 'jquery',
+      jQuery: 'jquery',
+      _: 'lodash',
+      Vue: 'vue',
+      Vuex: 'vuex'
     })
   ],
   module: {
@@ -26,11 +26,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ["style-loader", "css-loader"]
+        loaders: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(woff2?|ttf|eot|svg)$/,
@@ -38,4 +38,4 @@ module.exports = {
       }
     ]
   }
-}
+};
