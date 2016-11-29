@@ -44,7 +44,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   p {
     color: green;
   }
