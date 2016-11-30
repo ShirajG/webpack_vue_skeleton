@@ -27,7 +27,7 @@
     },
     data: function () {
       return {
-        greeting: "Hello World"
+        greeting: "Check out this counter"
       }
     },
     methods: {
