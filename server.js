@@ -67,7 +67,7 @@ if (isProduction) {
   }));
 }
 
-app.controllers = require('./app/controllers/home');
+app.controllers = require('./app/controllers/');
 require('./app/routes/home')(app);
 
 models.sequelize.sync().then( function() {
