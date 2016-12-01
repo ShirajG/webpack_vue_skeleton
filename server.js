@@ -67,13 +67,8 @@ if (isProduction) {
   }));
 }
 
-//configure mvc
-consign({cwd:'app'})
-  .include('controllers')
-  .then('routes')
-  .into(app);
-
-
+app.controllers = require('./app/controllers/home');
+require('./app/routes/home')(app);
 
 models.sequelize.sync().then( function() {
   app.listen(app.get('port'), function() {

@@ -1,10 +1,10 @@
-var controller = {};
+var controllers = {};
 
-controller.index = function(req, res){
+controllers.index = function(req, res){
   res.render('home',{
     title: "Hello World",
     message: "This is awesome!"
   });
 };
 
-module.exports = controller;
+module.exports = controllers;
