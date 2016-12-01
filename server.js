@@ -67,9 +67,13 @@ if (isProduction) {
   }));
 }
 
+// Load Controllers
 app.controllers = require('./app/controllers/');
-require('./app/routes/home')(app);
 
+// Load Routes
+require('./app/routes')(app);
+
+// Load Models
 models.sequelize.sync().then( function() {
   app.listen(app.get('port'), function() {
     console.log('App listening at port ' + app.get('port'));
