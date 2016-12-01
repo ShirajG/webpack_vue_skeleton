@@ -9,12 +9,14 @@ var app = express();
 var models = require('./app/models');
 
 // Webpack configuration
+
 var webpack = require('webpack');
-var webpackDevMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
+
 if (isProduction) {
   var webpackConfig = require('./webpack.config');
 } else {
+  var webpackDevMiddleware = require('webpack-dev-middleware');
+  var webpackHotMiddleware = require('webpack-hot-middleware');
   var webpackConfig = require('./webpack.dev.config');
 }
 var webpackCompiler = webpack(webpackConfig);
