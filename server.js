@@ -69,9 +69,11 @@ if (isProduction) {
 
 //configure mvc
 consign({cwd:'app'})
-  .then('controllers')
+  .include('controllers')
   .then('routes')
   .into(app);
+
+
 
 models.sequelize.sync().then( function() {
   app.listen(app.get('port'), function() {
